@@ -10,6 +10,7 @@
 #import "MyHomeViewModel.h"
 #import "MyHomeModel.h"
 #import "HomeTableViewCell.h"
+#import "HomeSecondTableViewCell.h"
 static NSString *CELL1 = @"cell1";
 static NSString *CELL2 = @"cell2";
 static NSString *CELL3 = @"cell3";
@@ -25,7 +26,7 @@ static NSString *CELL4 = @"cell4";
     if (self) {
         self.backgroundColor=[UIColor colorWithRed:240.0/255.0f green:240.0/255.0f blue:240.0/255.0f alpha:1.0];
         _viewModel = [[MyHomeViewModel alloc]init];
-
+        
         [self m_creatviews];
     }
     return self;
@@ -40,12 +41,12 @@ static NSString *CELL4 = @"cell4";
         _tableView = [[UITableView alloc] init];
         
         [self addSubview: _tableView];
-
+        
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.size.mas_equalTo(CGSizeMake(self.frame.size.width, self.frame.size.height));
+            make.size.mas_equalTo(CGSizeMake(mWidth, mHeight-64-49));
             make.left.equalTo(self.mas_left);
             make.top.equalTo(self.mas_top);
-         }];
+        }];
         
         _tableView.delegate = self;
         _tableView.dataSource = self;
@@ -57,14 +58,14 @@ static NSString *CELL4 = @"cell4";
         [_tableView registerClass: NSClassFromString(cellReuseIdentifier) forCellReuseIdentifier:cellReuseIdentifier];
         
         _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
- 
+            
             [weakSelf getMyData];
         }];
         
         _tableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
             [weakSelf getMyData];
-
-         }];
+            
+        }];
         
         [_tableView.mj_header beginRefreshing];
         
@@ -74,7 +75,7 @@ static NSString *CELL4 = @"cell4";
 }
 
 -(void)getMyData{
-     __weak typeof(self) weakSelf = self;
+    __weak typeof(self) weakSelf = self;
     
     [_viewModel setBlockWithReturnBlock:^(id returnvalue){
         NSLog(@"returnvalue:%@",returnvalue);
@@ -86,29 +87,36 @@ static NSString *CELL4 = @"cell4";
             NSDictionary *dic = [[NSDictionary alloc]initWithDictionary:returnvalue];
             
             weakSelf.model = [MyHomeModel yy_modelWithJSON:dic];
-            NSLog(@"title : %@",weakSelf.model.title);
+//            NSLog(@"title : %@",weakSelf.model.title);
             NSMutableArray *arr =dic[@"tags"];
-            NSLog(@"images : %@",arr);
+//            NSLog(@"images : %@",arr);
             [weakSelf.viewModel.listArray removeAllObjects];
             MyHomeModel_Image *model_image = [MyHomeModel_Image yy_modelWithJSON:dic[@"images"]];
-
             
-                        for (NSDictionary *dic1 in arr) {
-                            MyHomeModel_Cell *model1 = [MyHomeModel_Cell yy_modelWithJSON:dic1];
-                            NSLog(@"%@",model1.name);
-                            model1.image =model_image.small;
-                            [weakSelf.viewModel.listArray addObject:model1];
-                        }
             
-            for (NSDictionary *dic1 in arr) {
-                MyHomeModel_Cell *model1 = [MyHomeModel_Cell yy_modelWithJSON:dic1];
-                NSLog(@"%@",model1.name);
-                model1.image =model_image.small;
-
-                [weakSelf.viewModel.listArray addObject:model1];
+            for (int i =0; i<500; i++) {
+                for (int j=0; j<[arr count]; j++) {
+                    NSDictionary *dic1 = [arr objectAtIndex:j];
+                    MyHomeModel_Cell *model1 = [MyHomeModel_Cell yy_modelWithJSON:dic1];
+                    NSLog(@"%@",model1.name);
+                    model1.name=[NSString stringWithFormat:@"%d %@",(int)(i*[arr count]+j),model1.name];
+                    model1.image =model_image.small;
+                    [weakSelf.viewModel.listArray addObject:model1];
+                    
+                }
+                //                for (NSDictionary *dic1 in arr) {
+                //                    MyHomeModel_Cell *model1 = [MyHomeModel_Cell yy_modelWithJSON:dic1];
+                //                    NSLog(@"%@",model1.name);
+                //                    model1.name=[NSString stringWithFormat:@"%d %@",,model1.name];
+                //                    model1.image =model_image.small;
+                //                    [weakSelf.viewModel.listArray addObject:model1];
+                //                }
             }
             
-             //            [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(refreshMyView) userInfo:nil repeats:NO];//设置执行时间
+            
+            
+            
+            //            [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(refreshMyView) userInfo:nil repeats:NO];//设置执行时间
             
             
             
@@ -127,7 +135,7 @@ static NSString *CELL4 = @"cell4";
 -(void)endRefresh{
     [_tableView.mj_header endRefreshing];
     [_tableView.mj_footer endRefreshing];
-
+    
 }
 
 
@@ -137,59 +145,33 @@ static NSString *CELL4 = @"cell4";
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return [_viewModel.listArray count];
-//    return 4;
+    //    return 4;
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"%d",(int)indexPath.row);
+
+    if(indexPath.row%2==1){
+    
+    static NSString *CellIdentifier = @"HomeTableViewCell";
+
+    HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    // 如果从集合中未找到单元格,也就是集合中还没有单元格,也就是还没有单元格出屏幕,那么我们就需要创建单元格
+    if (!cell)
+    {
+        // 创建cell的时候需要标示符(Identifier)是因为,当该cell出屏幕的时候需要根据标示符放到对应的集合中.
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"HomeTableViewCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+        //        if (!cell){
+        //            [tableView registerNib:[UINib nibWithNibName:@"HomeSimpleTableViewCell" bundle:nil] forCellReuseIdentifier:@"HomeSimpleTableViewCell"];
+        //            cell = [tableView dequeueReusableCellWithIdentifier:@"HomeSimpleTableViewCell"];
+        //         }
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
     MyHomeModel_Cell *model_cell = [_viewModel.listArray objectAtIndex:indexPath.row];
     
-    
-    HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"HomeTableViewCell"];
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"HomeTableViewCell" owner:self options:nil];
-    cell = [nib objectAtIndex:0];
-    //        if (!cell){
-    //            [tableView registerNib:[UINib nibWithNibName:@"HomeSimpleTableViewCell" bundle:nil] forCellReuseIdentifier:@"HomeSimpleTableViewCell"];
-    //            cell = [tableView dequeueReusableCellWithIdentifier:@"HomeSimpleTableViewCell"];
-    //         }
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
-//    switch (indexPath.row) {
-//        case 0:
-//        {
-//            cell =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CELL1];
-//            cell.backgroundColor = [UIColor yellowColor];
-//            cell.selectionStyle = UITableViewCellSelectionStyleDefault;
-    
-    
-//        }
-//            break;
-//        case 1:
-//        {
-//            cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CELL2];
-//            cell.backgroundColor = [UIColor yellowColor];
-//            cell.selectionStyle = UITableViewCellSelectionStyleGray;
-//        }
-//            break;
-//        case 2:
-//        {
-//            cell =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CELL2];
-//            cell.backgroundColor = [UIColor blueColor];
-//            cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-//        }
-//            break;
-//        case 3:
-//        {
-//            cell =[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CELL4];
-//            cell.backgroundColor = [UIColor purpleColor];
-//            cell.selectionStyle = UITableViewCellSelectionStyleDefault;
-//        }
-//            break;
-//    }
-//    [cell.imageView sd_setImageWithURL:[NSURL URLWithString: @"http://pic15.nipic.com/20110717/7170514_095330317000_2.jpg"]];
-//    cell.detailTextLabel.text =[NSString stringWithFormat:@"%@",model_cell.title];
-//    cell.textLabel.text = [NSString stringWithFormat:@"%d %@",(int)indexPath.row,model_cell.name];
     cell.myModel_cell=model_cell;
     
     [cell handlerInvestButtonAction:^(NSInteger m){
@@ -199,6 +181,36 @@ static NSString *CELL4 = @"cell4";
     }];
     
     return cell;
+    }
+    
+    else{
+        static NSString *CellIdentifier = @"HomeSecondTableViewCell";
+        
+        HomeSecondTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        // 如果从集合中未找到单元格,也就是集合中还没有单元格,也就是还没有单元格出屏幕,那么我们就需要创建单元格
+        if (!cell)
+        {
+            // 创建cell的时候需要标示符(Identifier)是因为,当该cell出屏幕的时候需要根据标示符放到对应的集合中.
+            NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"HomeSecondTableViewCell" owner:self options:nil];
+            cell = [nib objectAtIndex:0];
+            //        if (!cell){
+            //            [tableView registerNib:[UINib nibWithNibName:@"HomeSimpleTableViewCell" bundle:nil] forCellReuseIdentifier:@"HomeSimpleTableViewCell"];
+            //            cell = [tableView dequeueReusableCellWithIdentifier:@"HomeSimpleTableViewCell"];
+            //         }
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        }
+         MyHomeModel_Cell *model_cell = [_viewModel.listArray objectAtIndex:indexPath.row];
+        
+        cell.myModel_cell=model_cell;
+        
+        [cell handlerInvestButtonAction:^(NSInteger m){
+            if (self.buttonBlock) {
+                self.buttonBlock(m);
+            }
+        }];
+        
+        return cell;
+    }
 }
 
 #pragma mark 按钮事件
@@ -215,11 +227,11 @@ static NSString *CELL4 = @"cell4";
     
 }
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end

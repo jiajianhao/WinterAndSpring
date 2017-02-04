@@ -9,6 +9,7 @@
 #import "MyHomeViewController.h"
 #import "MyHomeView.h"
 #import "HomeDetailViewController.h"
+#import "MyHomeViewModel.h"
 @interface MyHomeViewController ()
 @property (nonatomic,strong)MyHomeView *myHomeView;
 @end

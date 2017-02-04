@@ -1,21 +1,21 @@
 //
-//  HomeTableViewCell.m
+//  HomeSecondTableViewCell.m
 //  WinterAndSpring
 //
-//  Created by admin on 2017/2/3.
+//  Created by admin on 2017/2/4.
 //  Copyright © 2017年 admin. All rights reserved.
 //
 
-#import "HomeTableViewCell.h"
-#import "MyHomeModel.h"
+#import "HomeSecondTableViewCell.h"
+ #import "MyHomeModel.h"
 #import "HomeDetailViewController.h"
-@interface HomeTableViewCell()
+@interface HomeSecondTableViewCell()
 @property (nonatomic,strong)UIImageView *imgview;
 @property (nonatomic,strong)UILabel *label_name;
 @property (nonatomic,strong)UILabel *label_title;
 @property (weak, nonatomic)  UIButton *investButton;
 @end
-@implementation HomeTableViewCell
+@implementation HomeSecondTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -35,7 +35,7 @@
     
     //标题
     UILabel *titleName = [[UILabel alloc] init];
-    titleName.textColor = [UIColor blackColor];
+    titleName.textColor = [UIColor colorWithHex:0xff5000];
     titleName.font = [UIFont systemFontOfSize:20];
     titleName.textAlignment = NSTextAlignmentLeft;
     titleName.text = @"标题";
@@ -45,8 +45,8 @@
     
     //标签1
     UILabel *label1 = [[UILabel alloc] init];
-    label1.textColor = [UIColor colorWithHex:0x49B4FF];
-//    label1.backgroundColor = [UIColor colorWithHex:0x49B4FF alpha:0.1 ];
+    label1.textColor = [UIColor colorWithHex:0xff5000];
+    //    label1.backgroundColor = [UIColor colorWithHex:0x49B4FF alpha:0.1 ];
     label1.font = [UIFont systemFontOfSize:15];
     label1.textAlignment = NSTextAlignmentLeft;
     label1.text = @"内容";
@@ -55,8 +55,8 @@
     
     UIButton *investButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [investButton setBackgroundColor:[UIColor colorWithHex:0xff5000]];
-//    [investButton setImage:[UIImage imageNamed:@"按钮"] forState:UIControlStateNormal];
-//    [investButton setImage:[UIImage imageNamed:@"按钮"] forState:UIControlStateHighlighted];
+    //    [investButton setImage:[UIImage imageNamed:@"按钮"] forState:UIControlStateNormal];
+    //    [investButton setImage:[UIImage imageNamed:@"按钮"] forState:UIControlStateHighlighted];
     [investButton setTitle:@"详情" forState:UIControlStateNormal];
     [investButton addTarget:self action:@selector(investAction:) forControlEvents:UIControlEventTouchUpInside];
     
@@ -75,7 +75,7 @@
     [self.label_title setText:myModel_cell.title];
     
     [self resetFrame];
-
+    
 }
 
 -(void)resetFrame{
@@ -83,14 +83,14 @@
         make.size.mas_equalTo(CGSizeMake(60, 60));
         make.top.equalTo(self.mas_top).offset((self.frame.size.height-60)/2);
         make.left.equalTo(self.mas_left).offset(10);
-
+        
     }];
     
     [self.label_name mas_makeConstraints:^(MASConstraintMaker *make){
         make.size.mas_equalTo(CGSizeMake(mWidth-80-10, 25));
         make.left.equalTo(self.mas_left).offset(80);
         make.top.equalTo(self.imgview);
-
+        
         
     }];
     
@@ -98,25 +98,25 @@
         make.size.mas_equalTo(CGSizeMake(mWidth-80-10, 20));
         make.left.equalTo(self.mas_left).offset(80);
         make.bottom.equalTo(self.imgview);
-
+        
     }];
-
+    
     [self.investButton mas_makeConstraints:^(MASConstraintMaker *make){
         make.size.mas_equalTo(CGSizeMake(60, 44));
         make.right.equalTo(self.mas_right).offset(-10);
         make.top.equalTo(self.mas_top).offset((self.frame.size.height-44)/2);
         
     }];
-
-    self.imgview.layer.cornerRadius=8;
-    self.imgview.layer.masksToBounds=YES;
     
-    self.investButton.layer.cornerRadius=5;
-    self.investButton.layer.masksToBounds=YES;
+//    self.imgview.layer.cornerRadius=8;
+//    self.imgview.layer.masksToBounds=YES;
+//    
+//    self.investButton.layer.cornerRadius=5;
+//    self.investButton.layer.masksToBounds=YES;
 }
 -(void)investAction:(UIButton *)sender {
     NSLog(@"%@",self.label_name.text);
-
+    
     if (self.buttonBlock) {
         self.buttonBlock(_index);
     }
@@ -136,6 +136,7 @@
     }
     // Configure the view for the selected state
 }
+
 
 
 @end

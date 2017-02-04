@@ -38,6 +38,8 @@
 		8430C2CB1E448455002BD0F0 /* BusinessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8430C2C91E448455002BD0F0 /* BusinessViewController.xib */; };
 		8430C2CE1E44876B002BD0F0 /* UITabBar+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C2CD1E44876B002BD0F0 /* UITabBar+Badge.m */; };
 		843F4C6C1E375CE20033F32F /* JHRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 843F4C6B1E375CE20033F32F /* JHRequest.m */; };
+		84D9633E1E45A516000B3D97 /* HomeSecondTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84D9633C1E45A516000B3D97 /* HomeSecondTableViewCell.m */; };
+		84D9633F1E45A516000B3D97 /* HomeSecondTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84D9633D1E45A516000B3D97 /* HomeSecondTableViewCell.xib */; };
 		8554D1F6ACCB1A00DB546C96 /* libPods-WinterAndSpring.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27129D5CD46B249769B72910 /* libPods-WinterAndSpring.a */; };
 /* End PBXBuildFile section */
 
@@ -109,6 +111,9 @@
 		8430C2CD1E44876B002BD0F0 /* UITabBar+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Badge.m"; sourceTree = "<group>"; };
 		843F4C6A1E375CE20033F32F /* JHRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHRequest.h; sourceTree = "<group>"; };
 		843F4C6B1E375CE20033F32F /* JHRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHRequest.m; sourceTree = "<group>"; };
+		84D9633B1E45A516000B3D97 /* HomeSecondTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeSecondTableViewCell.h; sourceTree = "<group>"; };
+		84D9633C1E45A516000B3D97 /* HomeSecondTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeSecondTableViewCell.m; sourceTree = "<group>"; };
+		84D9633D1E45A516000B3D97 /* HomeSecondTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeSecondTableViewCell.xib; sourceTree = "<group>"; };
 		A83D9347750100BDA03D914D /* Pods-WinterAndSpring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinterAndSpring.release.xcconfig"; path = "Pods/Target Support Files/Pods-WinterAndSpring/Pods-WinterAndSpring.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -368,6 +373,9 @@
 				8430C2B31E448435002BD0F0 /* HomeTableViewCell.xib */,
 				8430C2B41E448435002BD0F0 /* MyHomeView.h */,
 				8430C2B51E448435002BD0F0 /* MyHomeView.m */,
+				84D9633B1E45A516000B3D97 /* HomeSecondTableViewCell.h */,
+				84D9633C1E45A516000B3D97 /* HomeSecondTableViewCell.m */,
+				84D9633D1E45A516000B3D97 /* HomeSecondTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -504,6 +512,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84D9633F1E45A516000B3D97 /* HomeSecondTableViewCell.xib in Resources */,
 				840CA1E01E24E42F007E51F4 /* LaunchScreen.storyboard in Resources */,
 				840CA1DD1E24E42F007E51F4 /* Assets.xcassets in Resources */,
 				8430C2CB1E448455002BD0F0 /* BusinessViewController.xib in Resources */,
@@ -589,6 +598,7 @@
 				8430C2C51E448435002BD0F0 /* MyHomeViewController.m in Sources */,
 				840CA1D51E24E42F007E51F4 /* AppDelegate.m in Sources */,
 				840CA20F1E24F503007E51F4 /* SingleModel.m in Sources */,
+				84D9633E1E45A516000B3D97 /* HomeSecondTableViewCell.m in Sources */,
 				840CA2081E24E553007E51F4 /* SingleViewController.m in Sources */,
 				8430C2C31E448435002BD0F0 /* HomeDetailViewController.m in Sources */,
 				8430C2CA1E448455002BD0F0 /* BusinessViewController.m in Sources */,
