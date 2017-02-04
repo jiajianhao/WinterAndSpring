@@ -7,17 +7,31 @@
 //
 
 #import "BusinessViewController.h"
+#import <objc/runtime.h>
+#import <objc/message.h>
 
 @interface BusinessViewController ()
 
 @end
 
 @implementation BusinessViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+void dynamicMethodIMP(id self, SEL _cmd){
+    NSLog(@"doSomthing SEL");
 }
++ (BOOL)resolveInstanceMethod:(SEL)sel{
+    if(sel == @selector(doSomething)){
+        NSLog(@"add method here!");
+        class_addMethod([self class], sel, (IMP)dynamicMethodIMP, "v@:");
+        return YES;
+    }
+    return [super resolveInstanceMethod:sel];
+}
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    [self performSelector:@selector(doSomething:)];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
