@@ -9,11 +9,36 @@
 /* Begin PBXBuildFile section */
 		840CA1D21E24E42F007E51F4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CA1D11E24E42F007E51F4 /* main.m */; };
 		840CA1D51E24E42F007E51F4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CA1D41E24E42F007E51F4 /* AppDelegate.m */; };
-		840CA1D81E24E42F007E51F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CA1D71E24E42F007E51F4 /* ViewController.m */; };
 		840CA1DB1E24E42F007E51F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840CA1D91E24E42F007E51F4 /* Main.storyboard */; };
 		840CA1DD1E24E42F007E51F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840CA1DC1E24E42F007E51F4 /* Assets.xcassets */; };
 		840CA1E01E24E42F007E51F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840CA1DE1E24E42F007E51F4 /* LaunchScreen.storyboard */; };
 		840CA1EB1E24E42F007E51F4 /* WinterAndSpringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CA1EA1E24E42F007E51F4 /* WinterAndSpringTests.m */; };
+		840CA2081E24E553007E51F4 /* SingleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CA2071E24E553007E51F4 /* SingleViewController.m */; };
+		840CA20B1E24E5F4007E51F4 /* SingleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CA20A1E24E5F4007E51F4 /* SingleView.m */; };
+		840CA20F1E24F503007E51F4 /* SingleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CA20E1E24F503007E51F4 /* SingleModel.m */; };
+		840CA2211E26444D007E51F4 /* SingleViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 840CA2201E26444D007E51F4 /* SingleViewModel.m */; };
+		840CA2841E275099007E51F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840CA2831E275099007E51F4 /* UIKit.framework */; };
+		840CA2861E2750A0007E51F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840CA2851E2750A0007E51F4 /* Foundation.framework */; };
+		840CA2881E2750A7007E51F4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840CA2871E2750A7007E51F4 /* QuartzCore.framework */; };
+		840CA28A1E2750AE007E51F4 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840CA2891E2750AE007E51F4 /* CoreFoundation.framework */; };
+		840CA28C1E2750B5007E51F4 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840CA28B1E2750B5007E51F4 /* CoreImage.framework */; };
+		840CA28E1E2750BC007E51F4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840CA28D1E2750BC007E51F4 /* CoreGraphics.framework */; };
+		8430C2921E445B81002BD0F0 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C2911E445B81002BD0F0 /* UIColor+Category.m */; };
+		8430C29B1E44700A002BD0F0 /* JHTabbarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C29A1E44700A002BD0F0 /* JHTabbarController.m */; };
+		8430C2A11E44814A002BD0F0 /* JHTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C2A01E44814A002BD0F0 /* JHTabbar.m */; };
+		8430C2BF1E448435002BD0F0 /* MyHomeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C2AF1E448435002BD0F0 /* MyHomeModel.m */; };
+		8430C2C01E448435002BD0F0 /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C2B21E448435002BD0F0 /* HomeTableViewCell.m */; };
+		8430C2C11E448435002BD0F0 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8430C2B31E448435002BD0F0 /* HomeTableViewCell.xib */; };
+		8430C2C21E448435002BD0F0 /* MyHomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C2B51E448435002BD0F0 /* MyHomeView.m */; };
+		8430C2C31E448435002BD0F0 /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C2B81E448435002BD0F0 /* HomeDetailViewController.m */; };
+		8430C2C41E448435002BD0F0 /* HomeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8430C2B91E448435002BD0F0 /* HomeDetailViewController.xib */; };
+		8430C2C51E448435002BD0F0 /* MyHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C2BB1E448435002BD0F0 /* MyHomeViewController.m */; };
+		8430C2C61E448435002BD0F0 /* MyHomeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C2BE1E448435002BD0F0 /* MyHomeViewModel.m */; };
+		8430C2CA1E448455002BD0F0 /* BusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C2C81E448455002BD0F0 /* BusinessViewController.m */; };
+		8430C2CB1E448455002BD0F0 /* BusinessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8430C2C91E448455002BD0F0 /* BusinessViewController.xib */; };
+		8430C2CE1E44876B002BD0F0 /* UITabBar+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 8430C2CD1E44876B002BD0F0 /* UITabBar+Badge.m */; };
+		843F4C6C1E375CE20033F32F /* JHRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 843F4C6B1E375CE20033F32F /* JHRequest.m */; };
+		8554D1F6ACCB1A00DB546C96 /* libPods-WinterAndSpring.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27129D5CD46B249769B72910 /* libPods-WinterAndSpring.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,12 +52,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27129D5CD46B249769B72910 /* libPods-WinterAndSpring.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WinterAndSpring.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		70A45A50B1E1CE61B0436676 /* Pods-WinterAndSpring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinterAndSpring.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WinterAndSpring/Pods-WinterAndSpring.debug.xcconfig"; sourceTree = "<group>"; };
+		7F1A94EE66891C126A5859E2 /* Pods_WinterAndSpringTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WinterAndSpringTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		840CA1CD1E24E42F007E51F4 /* WinterAndSpring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WinterAndSpring.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		840CA1D11E24E42F007E51F4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		840CA1D31E24E42F007E51F4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		840CA1D41E24E42F007E51F4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		840CA1D61E24E42F007E51F4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		840CA1D71E24E42F007E51F4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		840CA1DA1E24E42F007E51F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		840CA1DC1E24E42F007E51F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840CA1DF1E24E42F007E51F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -40,6 +66,50 @@
 		840CA1E61E24E42F007E51F4 /* WinterAndSpringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WinterAndSpringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		840CA1EA1E24E42F007E51F4 /* WinterAndSpringTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WinterAndSpringTests.m; sourceTree = "<group>"; };
 		840CA1EC1E24E42F007E51F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		840CA2061E24E553007E51F4 /* SingleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleViewController.h; sourceTree = "<group>"; };
+		840CA2071E24E553007E51F4 /* SingleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleViewController.m; sourceTree = "<group>"; };
+		840CA2091E24E5F4007E51F4 /* SingleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleView.h; sourceTree = "<group>"; };
+		840CA20A1E24E5F4007E51F4 /* SingleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleView.m; sourceTree = "<group>"; };
+		840CA20C1E24F34A007E51F4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		840CA20D1E24F503007E51F4 /* SingleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleModel.h; sourceTree = "<group>"; };
+		840CA20E1E24F503007E51F4 /* SingleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleModel.m; sourceTree = "<group>"; };
+		840CA21F1E26444D007E51F4 /* SingleViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SingleViewModel.h; sourceTree = "<group>"; };
+		840CA2201E26444D007E51F4 /* SingleViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingleViewModel.m; sourceTree = "<group>"; };
+		840CA2831E275099007E51F4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		840CA2851E2750A0007E51F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		840CA2871E2750A7007E51F4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		840CA2891E2750AE007E51F4 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		840CA28B1E2750B5007E51F4 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		840CA28D1E2750BC007E51F4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8430C28F1E445A37002BD0F0 /* UIColor_Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColor_Extension.h; sourceTree = "<group>"; };
+		8430C2901E445B81002BD0F0 /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
+		8430C2911E445B81002BD0F0 /* UIColor+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
+		8430C2991E44700A002BD0F0 /* JHTabbarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTabbarController.h; sourceTree = "<group>"; };
+		8430C29A1E44700A002BD0F0 /* JHTabbarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTabbarController.m; sourceTree = "<group>"; };
+		8430C29F1E44814A002BD0F0 /* JHTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHTabbar.h; sourceTree = "<group>"; };
+		8430C2A01E44814A002BD0F0 /* JHTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHTabbar.m; sourceTree = "<group>"; };
+		8430C2AE1E448435002BD0F0 /* MyHomeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHomeModel.h; sourceTree = "<group>"; };
+		8430C2AF1E448435002BD0F0 /* MyHomeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHomeModel.m; sourceTree = "<group>"; };
+		8430C2B11E448435002BD0F0 /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeTableViewCell.h; sourceTree = "<group>"; };
+		8430C2B21E448435002BD0F0 /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeTableViewCell.m; sourceTree = "<group>"; };
+		8430C2B31E448435002BD0F0 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		8430C2B41E448435002BD0F0 /* MyHomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHomeView.h; sourceTree = "<group>"; };
+		8430C2B51E448435002BD0F0 /* MyHomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHomeView.m; sourceTree = "<group>"; };
+		8430C2B71E448435002BD0F0 /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeDetailViewController.h; sourceTree = "<group>"; };
+		8430C2B81E448435002BD0F0 /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeDetailViewController.m; sourceTree = "<group>"; };
+		8430C2B91E448435002BD0F0 /* HomeDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeDetailViewController.xib; sourceTree = "<group>"; };
+		8430C2BA1E448435002BD0F0 /* MyHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHomeViewController.h; sourceTree = "<group>"; };
+		8430C2BB1E448435002BD0F0 /* MyHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHomeViewController.m; sourceTree = "<group>"; };
+		8430C2BD1E448435002BD0F0 /* MyHomeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyHomeViewModel.h; sourceTree = "<group>"; };
+		8430C2BE1E448435002BD0F0 /* MyHomeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyHomeViewModel.m; sourceTree = "<group>"; };
+		8430C2C71E448455002BD0F0 /* BusinessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessViewController.h; sourceTree = "<group>"; };
+		8430C2C81E448455002BD0F0 /* BusinessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessViewController.m; sourceTree = "<group>"; };
+		8430C2C91E448455002BD0F0 /* BusinessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BusinessViewController.xib; sourceTree = "<group>"; };
+		8430C2CC1E44876B002BD0F0 /* UITabBar+Badge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Badge.h"; sourceTree = "<group>"; };
+		8430C2CD1E44876B002BD0F0 /* UITabBar+Badge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Badge.m"; sourceTree = "<group>"; };
+		843F4C6A1E375CE20033F32F /* JHRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHRequest.h; sourceTree = "<group>"; };
+		843F4C6B1E375CE20033F32F /* JHRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHRequest.m; sourceTree = "<group>"; };
+		A83D9347750100BDA03D914D /* Pods-WinterAndSpring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WinterAndSpring.release.xcconfig"; path = "Pods/Target Support Files/Pods-WinterAndSpring/Pods-WinterAndSpring.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +117,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840CA28E1E2750BC007E51F4 /* CoreGraphics.framework in Frameworks */,
+				840CA28C1E2750B5007E51F4 /* CoreImage.framework in Frameworks */,
+				840CA28A1E2750AE007E51F4 /* CoreFoundation.framework in Frameworks */,
+				840CA2881E2750A7007E51F4 /* QuartzCore.framework in Frameworks */,
+				840CA2861E2750A0007E51F4 /* Foundation.framework in Frameworks */,
+				840CA2841E275099007E51F4 /* UIKit.framework in Frameworks */,
+				8554D1F6ACCB1A00DB546C96 /* libPods-WinterAndSpring.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +143,8 @@
 				840CA1CF1E24E42F007E51F4 /* WinterAndSpring */,
 				840CA1E91E24E42F007E51F4 /* WinterAndSpringTests */,
 				840CA1CE1E24E42F007E51F4 /* Products */,
+				F52F770E351F644B9E5FDC84 /* Pods */,
+				EBCBC5EEFED21BC3FC8D6F27 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,14 +160,17 @@
 		840CA1CF1E24E42F007E51F4 /* WinterAndSpring */ = {
 			isa = PBXGroup;
 			children = (
+				840CA1FC1E24E4FA007E51F4 /* Classes */,
+				840CA1FE1E24E4FA007E51F4 /* Common */,
+				840CA2001E24E4FA007E51F4 /* Other */,
+				840CA2011E24E4FA007E51F4 /* Resource */,
 				840CA1D31E24E42F007E51F4 /* AppDelegate.h */,
 				840CA1D41E24E42F007E51F4 /* AppDelegate.m */,
-				840CA1D61E24E42F007E51F4 /* ViewController.h */,
-				840CA1D71E24E42F007E51F4 /* ViewController.m */,
 				840CA1D91E24E42F007E51F4 /* Main.storyboard */,
 				840CA1DC1E24E42F007E51F4 /* Assets.xcassets */,
 				840CA1DE1E24E42F007E51F4 /* LaunchScreen.storyboard */,
 				840CA1E11E24E42F007E51F4 /* Info.plist */,
+				840CA20C1E24F34A007E51F4 /* PrefixHeader.pch */,
 				840CA1D01E24E42F007E51F4 /* Supporting Files */,
 			);
 			path = WinterAndSpring;
@@ -111,6 +193,230 @@
 			path = WinterAndSpringTests;
 			sourceTree = "<group>";
 		};
+		840CA1FC1E24E4FA007E51F4 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				8430C2AC1E448435002BD0F0 /* MyHome */,
+				8430C2A71E44842E002BD0F0 /* Busi */,
+				8430C2981E446F75002BD0F0 /* Main */,
+				840CA1FD1E24E4FA007E51F4 /* Single */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		840CA1FD1E24E4FA007E51F4 /* Single */ = {
+			isa = PBXGroup;
+			children = (
+				840CA2021E24E531007E51F4 /* Model */,
+				840CA2031E24E531007E51F4 /* View */,
+				840CA2041E24E531007E51F4 /* ViewController */,
+				840CA2051E24E531007E51F4 /* ViewModel */,
+			);
+			path = Single;
+			sourceTree = "<group>";
+		};
+		840CA1FE1E24E4FA007E51F4 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				840CA1FF1E24E4FA007E51F4 /* Category */,
+				843F4C6A1E375CE20033F32F /* JHRequest.h */,
+				843F4C6B1E375CE20033F32F /* JHRequest.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		840CA1FF1E24E4FA007E51F4 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8430C28F1E445A37002BD0F0 /* UIColor_Extension.h */,
+				8430C2901E445B81002BD0F0 /* UIColor+Category.h */,
+				8430C2911E445B81002BD0F0 /* UIColor+Category.m */,
+				8430C2CC1E44876B002BD0F0 /* UITabBar+Badge.h */,
+				8430C2CD1E44876B002BD0F0 /* UITabBar+Badge.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		840CA2001E24E4FA007E51F4 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		840CA2011E24E4FA007E51F4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		840CA2021E24E531007E51F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				840CA20D1E24F503007E51F4 /* SingleModel.h */,
+				840CA20E1E24F503007E51F4 /* SingleModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		840CA2031E24E531007E51F4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				840CA2091E24E5F4007E51F4 /* SingleView.h */,
+				840CA20A1E24E5F4007E51F4 /* SingleView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		840CA2041E24E531007E51F4 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				840CA2061E24E553007E51F4 /* SingleViewController.h */,
+				840CA2071E24E553007E51F4 /* SingleViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		840CA2051E24E531007E51F4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				840CA21F1E26444D007E51F4 /* SingleViewModel.h */,
+				840CA2201E26444D007E51F4 /* SingleViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8430C2981E446F75002BD0F0 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8430C2991E44700A002BD0F0 /* JHTabbarController.h */,
+				8430C29A1E44700A002BD0F0 /* JHTabbarController.m */,
+				8430C29F1E44814A002BD0F0 /* JHTabbar.h */,
+				8430C2A01E44814A002BD0F0 /* JHTabbar.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8430C2A71E44842E002BD0F0 /* Busi */ = {
+			isa = PBXGroup;
+			children = (
+				8430C2A81E44842E002BD0F0 /* Model */,
+				8430C2A91E44842E002BD0F0 /* View */,
+				8430C2AA1E44842E002BD0F0 /* ViewController */,
+				8430C2AB1E44842E002BD0F0 /* ViewModel */,
+			);
+			path = Busi;
+			sourceTree = "<group>";
+		};
+		8430C2A81E44842E002BD0F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8430C2A91E44842E002BD0F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8430C2AA1E44842E002BD0F0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8430C2C71E448455002BD0F0 /* BusinessViewController.h */,
+				8430C2C81E448455002BD0F0 /* BusinessViewController.m */,
+				8430C2C91E448455002BD0F0 /* BusinessViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8430C2AB1E44842E002BD0F0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8430C2AC1E448435002BD0F0 /* MyHome */ = {
+			isa = PBXGroup;
+			children = (
+				8430C2AD1E448435002BD0F0 /* Model */,
+				8430C2B01E448435002BD0F0 /* View */,
+				8430C2B61E448435002BD0F0 /* ViewController */,
+				8430C2BC1E448435002BD0F0 /* ViewModel */,
+			);
+			path = MyHome;
+			sourceTree = "<group>";
+		};
+		8430C2AD1E448435002BD0F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8430C2AE1E448435002BD0F0 /* MyHomeModel.h */,
+				8430C2AF1E448435002BD0F0 /* MyHomeModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8430C2B01E448435002BD0F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8430C2B11E448435002BD0F0 /* HomeTableViewCell.h */,
+				8430C2B21E448435002BD0F0 /* HomeTableViewCell.m */,
+				8430C2B31E448435002BD0F0 /* HomeTableViewCell.xib */,
+				8430C2B41E448435002BD0F0 /* MyHomeView.h */,
+				8430C2B51E448435002BD0F0 /* MyHomeView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8430C2B61E448435002BD0F0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8430C2B71E448435002BD0F0 /* HomeDetailViewController.h */,
+				8430C2B81E448435002BD0F0 /* HomeDetailViewController.m */,
+				8430C2B91E448435002BD0F0 /* HomeDetailViewController.xib */,
+				8430C2BA1E448435002BD0F0 /* MyHomeViewController.h */,
+				8430C2BB1E448435002BD0F0 /* MyHomeViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8430C2BC1E448435002BD0F0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8430C2BD1E448435002BD0F0 /* MyHomeViewModel.h */,
+				8430C2BE1E448435002BD0F0 /* MyHomeViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EBCBC5EEFED21BC3FC8D6F27 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				840CA28D1E2750BC007E51F4 /* CoreGraphics.framework */,
+				840CA28B1E2750B5007E51F4 /* CoreImage.framework */,
+				840CA2891E2750AE007E51F4 /* CoreFoundation.framework */,
+				840CA2871E2750A7007E51F4 /* QuartzCore.framework */,
+				840CA2851E2750A0007E51F4 /* Foundation.framework */,
+				840CA2831E275099007E51F4 /* UIKit.framework */,
+				7F1A94EE66891C126A5859E2 /* Pods_WinterAndSpringTests.framework */,
+				27129D5CD46B249769B72910 /* libPods-WinterAndSpring.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F52F770E351F644B9E5FDC84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70A45A50B1E1CE61B0436676 /* Pods-WinterAndSpring.debug.xcconfig */,
+				A83D9347750100BDA03D914D /* Pods-WinterAndSpring.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -118,9 +424,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 840CA1EF1E24E42F007E51F4 /* Build configuration list for PBXNativeTarget "WinterAndSpring" */;
 			buildPhases = (
+				674ED5BF5667AEDA5B9DDEB5 /* [CP] Check Pods Manifest.lock */,
 				840CA1C91E24E42F007E51F4 /* Sources */,
 				840CA1CA1E24E42F007E51F4 /* Frameworks */,
 				840CA1CB1E24E42F007E51F4 /* Resources */,
+				0F231312DD24579FB77D00DE /* [CP] Embed Pods Frameworks */,
+				0FD8DACB4CD0269D12DD2F02 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +506,9 @@
 			files = (
 				840CA1E01E24E42F007E51F4 /* LaunchScreen.storyboard in Resources */,
 				840CA1DD1E24E42F007E51F4 /* Assets.xcassets in Resources */,
+				8430C2CB1E448455002BD0F0 /* BusinessViewController.xib in Resources */,
+				8430C2C41E448435002BD0F0 /* HomeDetailViewController.xib in Resources */,
+				8430C2C11E448435002BD0F0 /* HomeTableViewCell.xib in Resources */,
 				840CA1DB1E24E42F007E51F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,13 +522,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0F231312DD24579FB77D00DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WinterAndSpring/Pods-WinterAndSpring-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0FD8DACB4CD0269D12DD2F02 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WinterAndSpring/Pods-WinterAndSpring-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		674ED5BF5667AEDA5B9DDEB5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		840CA1C91E24E42F007E51F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840CA1D81E24E42F007E51F4 /* ViewController.m in Sources */,
+				8430C2C21E448435002BD0F0 /* MyHomeView.m in Sources */,
+				8430C2CE1E44876B002BD0F0 /* UITabBar+Badge.m in Sources */,
+				840CA2211E26444D007E51F4 /* SingleViewModel.m in Sources */,
+				843F4C6C1E375CE20033F32F /* JHRequest.m in Sources */,
+				8430C2C01E448435002BD0F0 /* HomeTableViewCell.m in Sources */,
+				8430C2A11E44814A002BD0F0 /* JHTabbar.m in Sources */,
+				8430C29B1E44700A002BD0F0 /* JHTabbarController.m in Sources */,
+				8430C2921E445B81002BD0F0 /* UIColor+Category.m in Sources */,
+				8430C2C61E448435002BD0F0 /* MyHomeViewModel.m in Sources */,
+				8430C2BF1E448435002BD0F0 /* MyHomeModel.m in Sources */,
+				840CA20B1E24E5F4007E51F4 /* SingleView.m in Sources */,
+				8430C2C51E448435002BD0F0 /* MyHomeViewController.m in Sources */,
 				840CA1D51E24E42F007E51F4 /* AppDelegate.m in Sources */,
+				840CA20F1E24F503007E51F4 /* SingleModel.m in Sources */,
+				840CA2081E24E553007E51F4 /* SingleViewController.m in Sources */,
+				8430C2C31E448435002BD0F0 /* HomeDetailViewController.m in Sources */,
+				8430C2CA1E448455002BD0F0 /* BusinessViewController.m in Sources */,
 				840CA1D21E24E42F007E51F4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,10 +726,13 @@
 		};
 		840CA1F01E24E42F007E51F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70A45A50B1E1CE61B0436676 /* Pods-WinterAndSpring.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QDC3KV7D2U;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WinterAndSpring/PrefixHeader.pch";
 				INFOPLIST_FILE = WinterAndSpring/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.antrice.WinterAndSpring;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,10 +741,13 @@
 		};
 		840CA1F11E24E42F007E51F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A83D9347750100BDA03D914D /* Pods-WinterAndSpring.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = QDC3KV7D2U;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WinterAndSpring/PrefixHeader.pch";
 				INFOPLIST_FILE = WinterAndSpring/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.antrice.WinterAndSpring;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -418,6 +799,7 @@
 				840CA1F11E24E42F007E51F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		840CA1F21E24E42F007E51F4 /* Build configuration list for PBXNativeTarget "WinterAndSpringTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +808,7 @@
 				840CA1F41E24E42F007E51F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

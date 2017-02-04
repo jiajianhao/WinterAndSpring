@@ -1,0 +1,50 @@
+//
+//  PrefixHeader.pch
+//  WinterAndSpring
+//
+//  Created by admin on 2017/1/10.
+//  Copyright © 2017年 admin. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+ 
+#import <Masonry/Masonry.h>
+
+#import <AFNetworking.h>
+
+#import <YYModel.h>
+
+#import <MJRefresh.h>
+
+#import <SDWebImage/UIImageView+WebCache.h>
+
+#import "UIColor+Category.h"
+
+#import "UIColor_Extension.h"
+
+#import "UITabBar+Badge.h"
+
+
+//屏幕宽
+#define mWidth [[UIScreen mainScreen] bounds].size.width
+
+//屏幕高
+#define mHeight [[UIScreen mainScreen] bounds].size.height
+
+
+#define JHColor(r, g, b) \
+[UIColor colorWithRed:(r) / 255.0f \
+green:(g) / 255.0f \
+blue:(b) / 255.0f \
+alpha:1]
+
+#define isiOS10 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=10)
+#define isiOS9 ([[[[UIDevice currentDevice] systemVersion] substringToIndex:1] intValue]>=9)
+
+
+#endif /* PrefixHeader_pch */
